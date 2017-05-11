@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyen doi tien te</title>
+</head>
+<body>
+<form>
+    <table>
+    <tr>
+        <td>Amount</td>
+        <td>From Currency</td>
+        <td>To Currency</td>
+
+    </tr>
+    <tr>
+        <td>
+            <input type="text" name="tien" id="money">
+        </td>
+        <td width="100px">
+            <select name="fromcurrency" id="convert-from" style="width: 100px">
+                <option value="1">VND</option>
+                <option value="22000">USD</option>
+                <option value="3000">NDT</option>
+            </select>
+        </td>
+        <td>
+            <select name="tocurrency" id="convert-to" style="width: 100px">
+                <option value="1">VND</option>
+                <option value="22000">USD</option>
+                <option value="3000">NDT</option>
+            </select>
+        </td>
+        <td><button type="button" onclick="Result()">Convert</button></td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <label>Result:</label>
+            <label id="result"></label>
+        </td>
+    </tr>
+    </table>
+</form>
+<script>
+    function reset() {
+        document.getElementById('result').innerHTML = "";
+    }
+    function Result() {
+        reset();
+        var money = document.getElementById("money").value;
+        if(money == ""){
+            alert("Chua nhap tien doi");
+            return false;
+        }
+        var convertFrom = document.getElementById('convert-from').value;
+        var ele = document.getElementById('convert-to');
+        var nameMoney = ele.options[ele.selectedIndex].text;
+        var convertTo = ele.value;
+        if(convertFrom == convertTo){
+            alert("Sai ! Chon lai");
+            return false;
+        }else{
+            var resultConvert = (parseInt(convertFrom)* parseInt(money))/parseInt(convertTo) + nameMoney;
+            document.getElementById('result').innerHTML = resultConvert;
+        }
+
+    }
+</script>
+</body>
+</html>

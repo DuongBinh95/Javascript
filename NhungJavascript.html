@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <h1>Chèn mã Javascript vào trong thẻ (button)</h1>
+        <button type="button" onclick="alert('Xin chao');">Click Me</button>
+    </div><br/>
+    <div>
+        <h1>Sử dụng thẻ (script)</h1>
+        <button type="button" onclick="showMessage();">Click Me</button>
+        <script>
+            function showMessage() {
+                alert('Xin chao');
+            }
+        </script>
+    </div><br/>
+    <div>
+        <h1>Một file Javascript riêng và nhúng vào trang HTML.</h1>
+        <button type="button" onclick="showMessage();">Click Me</button>
+        <script src="myJS.js"></script>
+    </div>
+</body>
+</html>

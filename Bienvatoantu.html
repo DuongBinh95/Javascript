@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Biến và toán tử</title>
+</head>
+<body>
+    <div>
+        <h2>Khai báo các biến thuộc các kiểu khác nhau</h2>
+        <script>
+            var i= 10;
+            var f = 20.5;
+            var b = true;
+            var s = "Ha Noi";
+
+            document.write("i =" + i);
+            document.write("<br/>")
+            document.write("f =" +f);
+            document.write("<br/>");
+            document.write("b =" + b);
+            document.write("<br/>")
+            document.write("s =" +s);
+            document.write("<br/>");
+        </script>
+    </div>
+    <div>
+        <h2>Khai báo biến width chứa giá trị độ rộng của hình chữ nhật, biến height chứa giá trị chiều cao của hình chữ nhật. In ra màn hình diện tích của hình chữ nhật đó.</h2>
+        <script>
+            var width = 10;
+            var height = 10;
+            var area = width * height;
+            document.write("Area =" + area);
+        </script>
+    </div>
+    <div>
+        <h3>Dùng hàm prompt() để nhập 2 số từ bàn phím, lưu vào 2 biến là a và b. Kiểm tra xem a có phải là bội số của b hay không (tức là a có chia hết cho b hay không). Hiển thị kết quả ra màn hình bằng cách sử dụng hàm alert().</h3>
+        <script>
+            function checkboi(a, b) {
+                if(a%b ==0){
+                    alert("a la boi cua b");
+                }else{
+                    alert("a khong la boi cua b");
+                }
+            }
+            var a = prompt("Nhap so a");
+            var b = prompt("Nhap so b");
+            checkboi(a,b);
+        </script>
+    </div>
+
+</body>
+</html>

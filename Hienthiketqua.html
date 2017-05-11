@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hien thi ket qua</title>
+</head>
+<body>
+<h1>Hiển thị các thông báo dưới nhiều cách khác nhau</h1>
+    <div>
+        <h2>Hiển thị kết quả sử dụng hàm alert():</h2>
+        <button type="button" onclick="showMessage();">Click Me</button>
+        <script>
+            function showMessage() {
+                alert('Xin chao');
+            }
+        </script>
+    </div><br/>
+
+    <div>
+        <h2>Hiển thị kết quả sử dụng thẻ HTML:</h2>
+        <div id="messageDiv"></div>
+        <button type="button" onclick="showMessage();">Click Me</button>
+        <script>
+            function showMessage() {
+                document.getElementById('messageDiv').innerHTML= 'Xin chao';
+            }
+        </script>
+    </div><br/>
+
+    <div>
+        <h2>Hiển thị kết quả sử dụng hàm document.write():</h2>
+        <button type="button" onclick="showMessage();">Click Me</button>
+        <script>
+            function showMessage() {
+                document.write('Xin chao');
+            }
+        </script>
+    </div><br/>
+
+    <div>
+        <h2>Hiển thị kết quả sử dụng hàm console.log():</h2>
+        <button type="button" onclick="showMessage();">Click Me</button>
+        <script>
+            function showMessage(){
+                console.log('Xin chao Duong')
+            }
+        </script>
+        <h5>Lưu ý: Bật màn hình console của trình duyệt để có thể xem được kết quả.</h5>
+    </div>
+
+</body>
+</html>
